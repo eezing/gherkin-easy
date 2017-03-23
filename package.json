@@ -1,0 +1,36 @@
+{
+  "name": "gherkin-easy",
+  "version": "1.0.0",
+  "description": "Use gherkin to drive JavaScript unit testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/jest",
+    "example": "./node_modules/.bin/jest ./examples/__tests__/my-feature-test.js --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eezing/gherkin-easy.git"
+  },
+  "keywords": [
+    "gherkin",
+    "jest",
+    "unit",
+    "testing",
+    "mocha",
+    "test",
+    "javascript",
+    "node",
+    "bdd",
+    "tdd"
+  ],
+  "author": "Eric Zingeler",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/eezing/gherkin-easy/issues"
+  },
+  "homepage": "https://github.com/eezing/gherkin-easy#readme",
+  "dependencies": {
+    "gherkin": "^4.1.1",
+    "jest": "^19.0.2"
+  }
+}
