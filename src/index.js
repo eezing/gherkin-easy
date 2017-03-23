@@ -9,10 +9,7 @@ class FeatureTest {
 
         this.load = this.load.bind(this);
         this.run = this.run.bind(this);
-
-        if (featurePath) {
-            this.feature = featureStructure.create(loadAst.fromPath(featurePath));
-        }
+        this.feature = featurePath ? featureStructure.create(loadAst.fromPath(featurePath)) : undefined;
 
         console.dir(this.feature, { depth: null });
     }
