@@ -4,8 +4,8 @@ const fs = require('fs');
 const Gherkin = require('gherkin');
 const parser = new Gherkin.Parser();
 
-function fromPath(path) {
-    const fileBody = fs.readFileSync(path.resolve(__dirname, path), 'utf-8');
+function fromPath(filePath) {
+    const fileBody = fs.readFileSync(filePath, 'utf-8');
     return fromString(fileBody);
 }
 
