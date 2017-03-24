@@ -3,7 +3,7 @@ const fs = require('fs');
 const FeatureTest = require('../index');
 const featureAsString = fs.readFileSync('./src/__tests_assets__/dummy-feature.feature', 'utf-8');
 
-describe('FeatureTest.load', () => {
+describe('FeatureTest.load with string', () => {
 
     let featureTest;
 
