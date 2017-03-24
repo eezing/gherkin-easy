@@ -1,7 +1,7 @@
 'use strict';
 
-const loadAst = require('./load-ast');
-const featureStructure = require('./feature-structure');
+const astLoad = require('./ast-load');
+const astParse = require('./ast-parse');
 
 class FeatureTest {
 
@@ -9,13 +9,13 @@ class FeatureTest {
 
         this.load = this.load.bind(this);
         this.run = this.run.bind(this);
-        this.feature = featurePath ? featureStructure.create(loadAst.fromPath(featurePath)) : undefined;
+        this.feature = featurePath ? astParse.create(astLoad.fromPath(featurePath)) : undefined;
 
         console.dir(this.feature, { depth: null });
     }
 
     load(featureAsString) {
-        this.feature = featureStructure.create(loadAst.fromString(featureAsString));
+        this.feature = astParse.create(astLoad.fromString(featureAsString));
     }
 
     run() {
