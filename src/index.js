@@ -6,20 +6,25 @@ const astParse = require('./ast-parse');
 class FeatureTest {
 
     constructor(featurePath) {
-
         this.load = this.load.bind(this);
         this.run = this.run.bind(this);
         this.feature = featurePath ? astParse.create(astLoad.fromPath(featurePath)) : undefined;
-
-        console.dir(this.feature, { depth: null });
     }
 
     load(featureAsString) {
         this.feature = astParse.create(astLoad.fromString(featureAsString));
     }
 
-    run() {
-
+    run(tests) {
+        describe(`Feature: ${this.feature.name}`, () => {
+            this.feature.outlines.forEach(outline => {
+                outline.examples.forEach((example, index) => {
+                    describe(`Scenario: ${outline.name} | Example ${index + 1}`, () => {
+                        tests(example);
+                    });
+                });
+            });
+        });
     }
 }
 

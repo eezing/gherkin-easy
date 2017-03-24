@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest",
-    "example": "./node_modules/.bin/jest ./examples/__tests__/my-feature-test.js --watch"
+    "example": "./node_modules/.bin/jest ./examples/__tests__/withdraw-cash-test.js --watch"
   },
   "repository": {
     "type": "git",
