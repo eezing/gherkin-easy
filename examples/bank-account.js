@@ -8,7 +8,7 @@ class BankAccount {
         this.withdraw = this.withdraw.bind(this);
     }
 
-    withdraw(amt) {
+    withdraw(amt = 0) {
         this.balance = this.balance - amt;
         return amt;
     }
