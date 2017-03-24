@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/.bin/jest",
+    "test:watch": "./node_modules/.bin/jest --watch ./src",
     "example": "./node_modules/.bin/jest ./examples/__tests__/withdraw-cash-test.js --watch"
   },
   "repository": {
