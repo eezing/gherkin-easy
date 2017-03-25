@@ -98,7 +98,7 @@ featureTest.run(({ given, when, then, example }) => {
 
 4. Run test (using Jest CLI in this example):
 
-Run test: ``` $ jest ```
+``` $ jest ``` -->
 
 ```shell
 
