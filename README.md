@@ -8,7 +8,7 @@ Use gherkin to drive JavaScript unit testing
 
 ## Install
 
-NPM: ```$ npm install gherkin-easy```
+- ```$ npm install gherkin-easy```
 
 ## Getting Started
 
