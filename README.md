@@ -1,6 +1,6 @@
 # gherkin-easy
 
-Use gherkin to drive JavaScript unit testing
+Use gherkin to drive JavaScript unit testing and keep boilerplate to a minimum.
 
 ## Prerequisites
 
