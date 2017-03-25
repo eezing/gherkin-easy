@@ -5,7 +5,7 @@ Minimalistic Gherkin testing for JavaScript
 ## Prerequisites
 
 - Node.js v4 +
-- Test runner such as Jest or Mocha
+- Test runner such as [Jest](https://facebook.github.io/jest) or [Mocha](https://mochajs.org)
 
 ## Install
 
