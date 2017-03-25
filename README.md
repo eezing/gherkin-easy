@@ -2,9 +2,13 @@
 
 Use gherkin to drive JavaScript unit testing
 
+## Prerequisites
+
+- Test runner such as Jest or Mocha
+
 ## Install
 
-    $ npm install gherkin-easy
+NPM: ```$ npm install gherkin-easy```
 
 ## Getting Started
 
@@ -90,3 +94,30 @@ featureTest.run(({ given, when, then, example }) => {
 });
 
 ```
+
+4. Run test (using Jest in this example):
+
+```shell
+ PASS  examples/__tests__/withdraw-cash-test.js
+  Feature: Withdraw Cash
+    Scenario: Withdraw cash from bank account | Example 1
+      ✓ Given my account balance is $100 (1ms)
+      ✓ When I withdraw $50 from my account
+      ✓ Then my account should have a remaining balance of $50
+    Scenario: Withdraw cash from bank account | Example 2
+      ✓ Given my account balance is $100
+      ✓ When I withdraw $0 from my account
+      ✓ Then my account should have a remaining balance of $100
+    Scenario: Withdraw cash from bank account | Example 3
+      ✓ Given my account balance is $100
+      ✓ When I withdraw $1.25 from my account
+      ✓ Then my account should have a remaining balance of $98.75
+    Scenario: Withdraw cash from bank account | Example 4
+      ✓ Given my account balance is $1 (1ms)
+      ✓ When I withdraw $0.5 from my account
+      ✓ Then my account should have a remaining balance of $0.5
+    Scenario: Withdraw cash from bank account | Example 5
+      ✓ Given my account balance is $1 (1ms)
+      ✓ When I withdraw $5 from my account
+      ✓ Then my account should have a remaining balance of $-4
+  ```
