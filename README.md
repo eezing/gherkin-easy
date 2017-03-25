@@ -98,6 +98,11 @@ featureTest.run(({ given, when, then, example }) => {
 4. Run test (using Jest CLI in this example):
 
 ```shell
+
+Run test: $ jest
+
+Outputs:
+
  PASS  examples/__tests__/withdraw-cash-test.js
   Feature: Withdraw Cash
     Scenario: Withdraw cash from bank account | Example 1
