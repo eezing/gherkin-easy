@@ -1,6 +1,6 @@
 # gherkin-easy
 
-Minimalistic Gherkin unit testing for JavaScript
+Minimalistic Gherkin testing for JavaScript
 
 ## Prerequisites
 
