@@ -4,6 +4,7 @@ Use gherkin to drive JavaScript unit testing
 
 ## Prerequisites
 
+- Node.js v4 +
 - Test runner such as Jest or Mocha
 
 ## Install
