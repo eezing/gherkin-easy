@@ -1,15 +1,17 @@
 # gherkin-easy
+
 Use gherkin to drive JavaScript unit testing
 
 ## Install
 
-```$ npm install gherkin-easy```
+    $ npm install gherkin-easy
 
 ## Getting Started
 
-2. Create a gherkin feature file:
+1. Create a gherkin feature file:
 
 ```gherkin
+
 # ./withdraw-cash.feature
 
 Feature: Withdraw Cash
@@ -29,9 +31,10 @@ Feature: Withdraw Cash
             
 ```
 
-3. Create feature code:
+2. Create feature code:
 
 ```javascript
+
 // ./bank-account.js
 
 class BankAccount {
@@ -55,9 +58,10 @@ module.exports = BankAccount;
 
 ```
 
-4. Create test code:
+3. Create test code:
 
 ```javascript
+
 // ./__tests__/withdraw-cash-test.js
 
 const FeatureTest = require('gherkin-easy');
