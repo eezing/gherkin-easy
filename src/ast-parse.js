@@ -27,7 +27,7 @@ function getExamples(outlineExamples, steps) {
 
             const example = ex.cells.reduce((prev, curr, index) => {
 
-                prev[tableHeader.cells[index].value] = eval(curr.value);
+                prev[tableHeader.cells[index].value] = eval('(' + curr.value + ')');
 
                 return prev;
 
