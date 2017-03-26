@@ -1,3 +1,4 @@
+'use strict';
 
 const FeatureTest = require('../index');
 const featureTest = new FeatureTest('./src/__tests_assets__/types-in-examples.feature');

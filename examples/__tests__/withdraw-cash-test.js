@@ -1,3 +1,4 @@
+'use strict';
 
 const FeatureTest = require('../../src');
 const BankAccount = require('../bank-account');
