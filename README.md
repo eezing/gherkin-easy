@@ -2,6 +2,8 @@
 
 Minimalistic Gherkin testing for JavaScript
 
+[![Build Status](https://travis-ci.org/eezing/gherkin-easy.svg?branch=master)](https://travis-ci.org/eezing/gherkin-easy)
+
 ## Prerequisites
 
 - Node.js v4 +
