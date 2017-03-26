@@ -1,9 +1,9 @@
 Feature: Withdraw Cash
 
     Scenario Outline: Withdraw cash from bank account
-        Given my account balance is $<startingBalance>
-        When I withdraw $<withdrawAmount> from my account
-        Then my account should have a remaining balance of $<remainingBalance>
+        Given my account balance is <startingBalance> dollars
+        When I withdraw <withdrawAmount> dollars from my account
+        Then my account should have a remaining balance of <remainingBalance> dollars
 
         Examples:
             | startingBalance | withdrawAmount | remainingBalance |

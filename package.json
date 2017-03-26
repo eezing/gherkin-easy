@@ -4,7 +4,7 @@
   "description": "Use gherkin to drive JavaScript unit testing",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest",
+    "test": "./node_modules/.bin/jest --verbose",
     "test:watch": "./node_modules/.bin/jest --watch ./src",
     "example": "./node_modules/.bin/jest ./examples/__tests__/withdraw-cash-test.js --watch"
   },
