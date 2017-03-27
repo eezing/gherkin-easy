@@ -1,7 +1,7 @@
 {
   "name": "gherkin-easy",
   "version": "1.0.3",
-  "description": "Use gherkin to drive JavaScript unit testing",
+  "description": "Minimalistic Gherkin testing for JavaScript",
   "main": "lib/index.js",
   "scripts": {
     "test": "./node_modules/.bin/eslint && ./node_modules/.bin/jest --verbose",
