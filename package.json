@@ -4,9 +4,12 @@
   "description": "Use gherkin to drive JavaScript unit testing",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/jest --verbose",
+    "test": "eslint && ./node_modules/.bin/jest --verbose",
     "test:watch": "./node_modules/.bin/jest --watch ./src --verbose",
-    "example": "./node_modules/.bin/jest ./examples/__tests__/withdraw-cash-test.js --watch"
+    "build": "./node_modules/.bin/babel src -d lib",
+    "preversion": "npm test",
+    "version": "npm run build",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
@@ -31,6 +34,7 @@
   },
   "homepage": "https://github.com/eezing/gherkin-easy#readme",
   "dependencies": {
+    "babel-cli": "^6.24.0",
     "gherkin": "^4.1.1",
     "jest": "^19.0.2"
   }
