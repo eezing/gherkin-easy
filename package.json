@@ -1,6 +1,6 @@
 {
   "name": "gherkin-easy",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Use gherkin to drive JavaScript unit testing",
   "main": "lib/index.js",
   "scripts": {
