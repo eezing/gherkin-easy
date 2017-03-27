@@ -8,6 +8,7 @@ class FeatureTest {
     constructor(featurePath) {
         this.load = this.load.bind(this);
         this.run = this.run.bind(this);
+        this.describe = describe;
         this.feature = featurePath ? astParse.create(astLoad.fromPath(featurePath)) : undefined;
     }
 
@@ -16,10 +17,10 @@ class FeatureTest {
     }
 
     run(tests) {
-        describe(`Feature: ${this.feature.name}`, () => {
+        this.describe(`Feature: ${this.feature.name}`, () => {
             this.feature.outlines.forEach(outline => {
                 outline.examples.forEach((example, index) => {
-                    describe(`Scenario: ${outline.name} | Example ${index + 1}`, () => {
+                    this.describe(`Scenario: ${outline.name} | Example ${index + 1}`, () => {
                         tests(example);
                     });
                 });
