@@ -8,8 +8,9 @@
     "test:watch": "./node_modules/.bin/jest --watch ./src --verbose",
     "build": "./node_modules/.bin/babel src -d lib",
     "preversion": "npm test",
-    "version": "npm run build",
-    "postversion": "git push && git push --tags"
+    "version": "npm test && npm run build",
+    "postversion": "git push && git push --tags",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
