@@ -4,11 +4,10 @@
   "description": "Use gherkin to drive JavaScript unit testing",
   "main": "index.js",
   "scripts": {
-    "test": "eslint && ./node_modules/.bin/jest --verbose",
+    "test": "./node_modules/.bin/eslint && ./node_modules/.bin/jest --verbose",
     "test:watch": "./node_modules/.bin/jest --watch ./src --verbose",
     "build": "./node_modules/.bin/babel src -d lib",
-    "preversion": "npm test",
-    "version": "npm test && npm run build",
+    "preversion": "npm test && npm run build",
     "postversion": "git push && git push --tags",
     "prepublish": "npm run build"
   },
@@ -38,5 +37,8 @@
     "babel-cli": "^6.24.0",
     "gherkin": "^4.1.1",
     "jest": "^19.0.2"
+  },
+  "devDependencies": {
+    "eslint": "^3.18.0"
   }
 }
