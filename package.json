@@ -10,9 +10,9 @@
     "test:watch": "./node_modules/.bin/jest --watch src --verbose",
     "test": "./node_modules/.bin/eslint src examples && npm run test:src && npm run example:jest && npm run example:mocha",
     "build": "./node_modules/.bin/babel src -d lib",
-    "preversion": "npm test && npm run build",
+    "version": "npm test && npm run build",
     "postversion": "git push && git push --tags",
-    "prepublish": "npm run build"
+    "publish": "npm run build"
   },
   "repository": {
     "type": "git",
