@@ -4,8 +4,11 @@
   "description": "Minimalistic Gherkin testing for JavaScript",
   "main": "lib/index.js",
   "scripts": {
-    "test": "./node_modules/.bin/eslint && ./node_modules/.bin/jest --verbose",
-    "test:watch": "./node_modules/.bin/jest --watch ./src --verbose",
+    "example:jest": "./node_modules/.bin/jest 'examples/__tests__/.*-jest.js' --verbose",
+    "example:mocha": "./node_modules/.bin/mocha 'examples/__tests__/*-mocha.js'",
+    "test:src": "./node_modules/.bin/jest src --verbose",
+    "test:watch": "./node_modules/.bin/jest --watch src --verbose",
+    "test": "./node_modules/.bin/eslint src examples && npm run test:src && npm run example:jest && npm run example:mocha",
     "build": "./node_modules/.bin/babel src -d lib",
     "preversion": "npm test && npm run build",
     "postversion": "git push && git push --tags",
@@ -38,7 +41,9 @@
   },
   "devDependencies": {
     "babel-cli": "^6.24.0",
+    "chai": "^3.5.0",
     "eslint": "^3.18.0",
-    "jest": "^19.0.2"
+    "jest": "^19.0.2",
+    "mocha": "^3.2.0"
   }
 }
