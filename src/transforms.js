@@ -29,7 +29,7 @@ function gherkinStepsToObject(outlineSteps) {
 }
 
 function gherkinVarToTemplateVar(string) {
-    return string.replace('<', '${').replace('>', '}');
+    return string.replace(/</g, '${').replace(/>/g, '}');
 }
 
 function typeToText(value) {
