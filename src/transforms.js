@@ -1,30 +1,34 @@
 'use strict';
 
 function gherkinStepsToObject(outlineSteps) {
+    let lastKey;
 
-    return outlineSteps.reduce((prev, next) => {
-
+    return outlineSteps.reduce((output, next) => {
         switch (next.keyword) {
-
         case 'Given ':
-            prev.given = `Given ${gherkinVarToTemplateVar(next.text)}`;
-            break;
-
-        case 'And ':
-            prev.given = `${prev.given.text} And ${gherkinVarToTemplateVar(next.text)}`;
+            output.given = `Given ${gherkinVarToTemplateVar(next.text)}`;
+            lastKey = 'given';
             break;
 
         case 'When ':
-            prev.when = `When ${gherkinVarToTemplateVar(next.text)}`;
+            output.when = `When ${gherkinVarToTemplateVar(next.text)}`;
+            lastKey = 'when';
             break;
 
         case 'Then ':
-            prev.then = `Then ${gherkinVarToTemplateVar(next.text)}`;
+            output.then = `Then ${gherkinVarToTemplateVar(next.text)}`;
+            lastKey = 'then';
+            break;
+
+        case 'And ':
+            if (output[lastKey] === undefined) throw '"And" can\'t be first';
+            output[lastKey] = `${output[lastKey]} And ${gherkinVarToTemplateVar(
+          next.text
+        )}`;
             break;
         }
 
-        return prev;
-
+        return output;
     }, {});
 }
 
@@ -33,9 +37,7 @@ function gherkinVarToTemplateVar(string) {
 }
 
 function typeToText(value) {
-
     switch (typeof value) {
-
     case 'string':
         return `"${value}"`;
 
